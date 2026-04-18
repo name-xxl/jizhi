@@ -1,0 +1,50 @@
+{
+  "name": "jizhi-react",
+  "version": "2.6.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && rimraf builds && webpack --mode production && node build.js",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --mode development --open --watch --port=3000",
+    "test": "jest",
+    "lint": "eslint --cache --format codeframe --ext .mjs,.jsx,.js src",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --list-different --write  \"**/*.{js,jsx}\""
+  },
+  "dependencies": {
+    "archiver": "^3.1.1",
+    "axios": "^0.21.1",
+    "chalk": "^4.1.2",
+    "evergreen-ui": "^4.19.1",
+    "handlebars": "^4.7.6",
+    "lodash": "^4.17.21",
+    "prop-types": "^15",
+    "react": "^16",
+    "react-dom": "^16",
+    "react-hot-loader": "^4",
+    "react-p5-wrapper": "^3.2.1",
+    "retina-dom-to-image": "^2.5.6",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@neutrinojs/copy": "^9.5.0",
+    "@neutrinojs/eslint": "^9.5.0",
+    "@neutrinojs/jest": "^9.5.0",
+    "@neutrinojs/react": "^9.5.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.22.0",
+    "jest": "^25",
+    "neutrino": "^9.5.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "webpack": "^4",
+    "webpack-cli": "^3",
+    "webpack-dev-server": "^3"
+  }
+}
